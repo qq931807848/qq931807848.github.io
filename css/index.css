@@ -1,1 +1,157 @@
-
+ div,body{
+        margin: 0;
+        padding: 0;
+    }
+    #wrap {
+        width: 100%;
+        height: 700px;
+        background-image: url(kjbg.jpg);
+        background-size:auto;
+    }
+    .photo {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+    .photo img {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        margin-left: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        position: relative;
+        animation-name: firstImg;
+        animation-timing-function: linear;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes firstImg {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    .nav {
+        width: 100%;
+        height: 60px;
+        background-color: rgba(92, 92, 92, 0.836);
+        color: #3abeb3;
+        line-height: 60px;
+        display: flex;
+    }
+    .nav span {
+        margin-left: 60px;
+        cursor: pointer;
+        position: absolute;
+        animation-name: nav;
+        animation-timing-function: linear;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        animation-delay: 3s;
+    }
+    @keyframes nav {
+        0% {
+            transform: rotate(20deg);
+        };  
+        50% {
+            transform: rotate(120deg);
+        };           
+        100% {
+            transform: rotate(340deg);
+        }; 
+    }
+    .next {
+        width: 40px;
+        height: 30px;
+        background-color: white;
+        text-align: center;
+        line-height: 30px;
+    }
+    .content {
+        width: 100%;
+        height: 230px;
+        display: flex;
+        flex-direction: column;
+    }
+    .bottom {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .next {
+        margin-right: 20px;
+    }
+    .first_text {
+        width: 100%;
+        height: 230px;
+        position: absolute;
+        color: rgba(131, 99, 207, 0.604);
+    }
+    .first_text h4 {
+        color: khaki;
+        position: relative;
+        animation-name: firstText;
+        animation-timing-function: linear;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-delay: 6s;
+        animation-direction: alternate;
+    }
+    @keyframes firstText {
+        from {
+            color: hsl(266, 70%, 63%);
+            left: 0px;
+        }to {
+            color: #ccc;
+            left: 500px;
+        }
+    }
+    .first_text p {
+        position: relative;
+        animation-name: firstTextP;
+        animation-timing-function: linear;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-delay: 11s;
+        animation-direction: alternate;
+    }
+    @keyframes firstTextP {
+        from {
+            opacity: 0.8;
+            top: 0px;
+        }to {
+            opacity: 0.3;
+            top: 40px;
+        }
+    }
+    .title{
+        width: 100%;
+        height: 300px;
+        color: #3abeb3;
+        display: flex;
+       justify-content: center;
+        align-items: flex-start;
+        animation-name: firstTitle;   
+    }
+    .title h2{
+        position: relative;
+        animation-name: firstTitle;
+        animation-timing-function: linear;
+        animation-duration: 3s;
+        animation-iteration-count: 2;
+        animation-delay: 13s;
+        animation-direction: alternate;   
+    }
+    @keyframes firstTitle{
+        from{
+            transform: skewX(30deg);
+        }to{
+            transform: skewX(60deg);
+        }
+    }
