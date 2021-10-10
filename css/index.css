@@ -171,9 +171,9 @@
             animation-fill-mode: forwards; 
         }
         @keyframes firstTitle{
-            from{
-                transform: skewX(90deg) translateX(0);
+              from{
+                transform: skewX(90deg) translateX(0) rotate(0deg);
             }to{
-                transform: skewX(0deg) translate(740px);
+                transform: skewX(0deg) translate(745px) rotate(360deg);
             }
         }
