@@ -112,7 +112,7 @@
             animation-timing-function: linear;
             animation-duration: 2s;
             animation-iteration-count: 2;
-            animation-delay: 5s;
+            animation-delay: 3s;
             animation-direction: alternate;
             animation-fill-mode: forwards;
         }
@@ -132,7 +132,7 @@
             animation-timing-function: linear;
             animation-duration: 2s;
             animation-iteration-count: 2;
-            animation-delay: 9s;
+            animation-delay: 7s;
             animation-direction: alternate;
             animation-fill-mode: forwards;
         }
@@ -165,7 +165,7 @@
             animation-timing-function: linear;
             animation-duration: 3s;
             animation-iteration-count: 1;
-            animation-delay: 13s;
+            animation-delay: 11s;
             animation-direction: alternate;  
             animation-fill-mode: forwards; 
         }
