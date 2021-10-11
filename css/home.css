@@ -102,7 +102,7 @@ main{
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    padding-top: 10px;
+    padding: 10px 10px 0px 10px;
 }
 .second_section{
     margin-top: 10px;
@@ -112,6 +112,7 @@ main{
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    padding: 10px 10px 0px 10px;
 }
 .content_title span{
     display: block;
@@ -131,6 +132,7 @@ main{
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    padding: 10px 10px 0px 10px;
 }
 .mark{
     font-size: 30px;
