@@ -1,4 +1,4 @@
-body,div,ul,li,p{
+body,div,ul,li,p,span{
     margin: 0;
     padding: 0;
 }
@@ -117,8 +117,10 @@ main{
 .content_title span{
     display: block;
     text-indent: 20px;
-    margin-top: 5px;
+    margin-top: 10px;
     color: #2879d0;
+    padding-left: 10px;
+
 }
 .content_firsttext,.content_secondtext,.content_thirdtext{
     width: 100%;
