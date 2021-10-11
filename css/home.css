@@ -3,6 +3,7 @@ body,div,ul,li,p{
     padding: 0;
 }
 #wrap{
+    min-width: 1000px;
     height: 700px;
     background-color: white;
 }
