@@ -33,6 +33,10 @@ header{
     width: 30%;
     height: 140px;
 }
+.header_right_blank{
+    width: 5%;
+    height: 140px;
+}
 .header_text{
     width: 40%;
     height: 140px;
