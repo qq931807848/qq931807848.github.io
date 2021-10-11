@@ -87,7 +87,7 @@ main{
 }
 .content_title{
     width: 100%;
-    height: 200px;
+    height: 180px;
 }
 .first_section{
    font-size: 15px;
@@ -97,7 +97,7 @@ main{
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    margin-top: 10px;
+    padding-top: 10px;
 }
 .second_section{
     margin-top: 10px;
@@ -117,6 +117,7 @@ main{
 .content_firsttext,.content_secondtext,.content_thirdtext{
     width: 100%;
     height: 100px;
+    margin-top: 10px;
 }
 .content_firsttext p,.content_secondtext p,.content_thirdtext p{
     overflow: hidden;
