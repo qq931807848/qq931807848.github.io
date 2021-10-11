@@ -24,9 +24,9 @@ header{
     text-align: center;
     line-height: 100px;
 }
-.header_title p{
+.header_title div{
     text-align: center; 
-    margin-top: -50px; 
+    margin-top: -30px; 
     margin-left: -15px; 
 }
 .header_blank{
@@ -91,7 +91,22 @@ main{
 }
 .first_section{
    font-size: 15px;
-    height: 70px;
+    overflow: hidden;
+    text-indent: 20px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-top: 10px;
+}
+.second_section{
+    margin-top: 10px;
+    overflow: hidden;
+    text-indent: 20px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 .content_title span{
     display: block;
@@ -102,6 +117,14 @@ main{
 .content_firsttext,.content_secondtext,.content_thirdtext{
     width: 100%;
     height: 100px;
+}
+.content_firsttext p,.content_secondtext p,.content_thirdtext p{
+    overflow: hidden;
+    text-indent: 20px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 .mark{
     font-size: 30px;
@@ -147,13 +170,6 @@ main{
     margin-left: 20px; 
     color: #474747;
     cursor: pointer;
-}
-p{
-    text-indent: 20px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    line-height: 70px;
 }
 
 
