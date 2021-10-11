@@ -82,7 +82,7 @@ main{
     text-align: center;
     line-height: 115px;
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
 }
 .content_title{
