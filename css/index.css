@@ -34,11 +34,14 @@
     margin-left: 10px;
     margin-top: 10px;
     cursor: pointer;
+  
+}
+.photo_img{
     position: relative;
     animation-name: firstImg;
     animation-timing-function: linear;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
 }
 @keyframes firstImg {
     from {
@@ -57,12 +60,15 @@
     display: flex;
 }
 .nav span {
-    margin-left: 60px;
     cursor: pointer;
+}
+.nav_text{
+   
     position: absolute;
+    left: 60px;
     animation-name: nav;
     animation-timing-function: linear;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     animation-iteration-count: 1; 
 }
 @keyframes nav {
@@ -106,13 +112,14 @@
 }
 .first_text h4 {
     color: black;
+}
+.text_h4{
     position: relative;
     left: -200px;
     animation-name: firstText;
     animation-timing-function: linear;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-iteration-count: 2;
-    animation-delay: 2s;
     animation-direction: alternate;
     animation-fill-mode: forwards;
 }
@@ -125,14 +132,13 @@
         left: 500px;
     }
 }
-.first_text p {
+.text_p{
     position: relative;
     left: -700px;
     animation-name: firstTextP;
     animation-timing-function: linear;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-iteration-count: 2;
-    animation-delay: 4s;
     animation-direction: alternate;
     animation-fill-mode: forwards;
 }
@@ -156,14 +162,13 @@
     align-items: flex-start;
     animation-name: firstTitle;   
 }
-.title h2{
+.text_h2{
     position: relative;
     left: -800px;
     animation-name: firstTitle;
     animation-timing-function: linear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
-    animation-delay: 6s;
     animation-direction: alternate;  
     animation-fill-mode: forwards; 
 }
