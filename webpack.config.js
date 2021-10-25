@@ -11,7 +11,11 @@ const stylesHandler = isProduction
   : "style-loader";
 
 const conf = getConfig({
-  modules:['index']  //新增模块
+<<<<<<< HEAD
+  modules:['index','home','animation','details','show']  //新增模块
+=======
+  modules:['index','mine','articleDetail','home']  //新增模块
+>>>>>>> c31f0a2a4c1e554c1331bc2fa84cf6a3e86f8cf0
 });
 
 const config = {

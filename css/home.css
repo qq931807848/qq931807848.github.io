@@ -1,0 +1,189 @@
+body,div,ul,li,p,span{
+    margin: 0;
+    padding: 0;
+}
+#wrap{
+    min-width: 1000px;
+    min-height: 100vh;
+    height: 100vh;
+    background-color: white;
+}
+header{
+    width: 100%;
+    height: 10vh      ;
+    background-color: black;
+    display: flex;
+}
+.header_title{
+    width: 25%;
+    height: 100%;
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header_title span{
+    font-size: 30px;
+    text-align: center;
+}
+.header_title div{
+    text-align: center; 
+    margin-left: -15px; 
+}
+.header_blank{
+    width: 30%;
+    height: 100%;
+}
+.header_right_blank{
+    width: 5%;
+    height: 100%;
+}
+.header_text{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.header_text p{
+    cursor: pointer;
+    padding: 10px 15px;
+}
+main{
+    width: 100%;
+    height: 80vh;
+    background-color: #cccccc23;
+    display: flex;
+}
+.main_blank{
+    width: 15%;
+    height: 100%;
+}
+.main_mid{
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+}
+.mid_content{
+    width: 70%;
+    height: 100%;
+    box-shadow:3px 0px 0px 0px #f1f1f1 ;
+}
+.mid_list{
+    width: 30%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mid_list li{
+    width: 200px;
+    height: 20%;
+    background-color: #dddddd;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.content_title{
+    width: 100%;
+    height: 40%;
+}
+.first_section{
+   font-size: 15px;
+    overflow: hidden;
+    text-indent: 20px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    padding: 30px 10px 0px 10px;
+}
+.second_section{
+    margin-top: 10px;
+    overflow: hidden;
+    text-indent: 20px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    padding: 10px 10px 0px 10px;
+}
+.content_title span{
+    display: block;
+    text-indent: 20px;
+    margin-top: 10px;
+    color: #2879d0;
+    padding-left: 10px;
+
+}
+.content_firsttext,.content_secondtext,.content_thirdtext{
+    width: 100%;
+    height: 20%;
+    padding-top: 5px;
+}
+.content_firsttext p,.content_secondtext p,.content_thirdtext p{
+    overflow: hidden;
+    text-indent: 20px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    padding: 10px 10px 0px 10px;
+}
+.mark{
+    font-size: 30px;
+    color: #9ddffe;   
+}
+.subtitle{
+    font-size: 30px;
+    margin-left: 15px;
+    color: #474747;
+}
+.page{
+    font-size: 30px;
+    margin-left: 20px; 
+    color: #474747;
+    cursor: pointer;
+}
+.second_mark{
+    font-size:20px;
+    color: #9ddffe; 
+}
+.second_subtitle{
+    font-size: 20px;
+    margin-left: 15px;
+    color: #474747;
+}
+.second_page{
+    font-size: 20px;
+    margin-left: 20px; 
+    color: #474747;
+    cursor: pointer;
+}
+.third_mark{
+    font-size:15px;
+    color: #9ddffe; 
+}
+.third_subtitle{
+    font-size: 15px;
+    margin-left: 15px;
+    color: #474747;
+}
+.third_page{
+    font-size: 15px;
+    margin-left: 20px; 
+    color: #474747;
+    cursor: pointer;
+}
+
+
+
+

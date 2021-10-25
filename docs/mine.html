@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+
+        .change {
+            animation: move 2s;
+        }
+
+        @keyframes move {
+            to {
+                background: yellow;
+            }
+        }
+    </style>
+<script defer src="mine/mine.9111601f5da7167acb90.js"></script></head>
+
+<body>
+    <div class="box1">hello world;</div>
+    <div class="box2">hello world;</div>
+    <div class="box3">hello world;</div>
+    <div class="box4">hello world;</div>
+    <button id="submit">submit</button>
+</body>
+<script>
+
+    // var arr = ['xiaoming','xiaohong','xiaogang'];
+    // var arr1 = arr.slice();  //深拷贝；
+    // arr1.shift();
+    // arr1.shift();
+    // arr1.shift();
+    // console.log(arr);  // ['xiaoming','xiaohong','xiaogang']
+
+    class Ani {
+        constructor(props) {
+            // 执行动画的目标；
+            this.targets = props.targets;
+            // 剩余动画次数；
+            this.count = props.count || 1;
+            // 入参的集合；
+            this.props = props;
+            // 是否需要倒序 Array类型，eg: [2] , 使第2次动画倒序；
+            this.reverse = props.reverse;
+            // 执行动画方法；
+            this.exec();
+        }
+        //判断当前是第几轮动画； currentIndex;
+        get curIndex() {
+            return this.props.count - this.count + 1;
+        }
+        //判断动画的最后一个元素是谁； 如果是倒序，那么返回数组中的第一个，如果是正序，返回数组中的最后一个元素；
+        get lastTarget() {
+            return this.targets[this.needReverse ? 0 : this.targets.length - 1];
+        }
+        //判断是否需要倒序；
+        get needReverse() {
+            try {
+                return this.reverse === true ? true : this.reverse.includes(this.curIndex);
+            } catch (e) {
+                return false;
+            }
+        }
+        // 执行动画效果；
+        exec() {
+            // 避免破坏原数组数据，如多次执行动画，不加slice，会造成无法多次运动；
+            // slice的作用是 深拷贝；
+            let targets = this.targets.slice();
+            this.addEventListener(targets);
+        }
+        //添加兼听动画事件；
+        addEventListener(targets) {
+            //如果数组没有长度，那么说明动画运动完成；
+            if (!targets.length) return;
+            //如果是倒序，拿数组中的最后一个；如果是正序，拿数组中的第一个；
+            let target = this.needReverse ? targets.pop() : targets.shift();
+            console.log(target);
+            // 添加动画效果；
+            target.el.classList.add(target.animationClassName);
+            let _this = this;
+            let handleEventlist = function (e) {
+                //动画执行完毕，删除class；
+                e.target.classList.remove(target.animationClassName);
+                // 去除元素的事件；
+                target.el.removeEventListener('animationend', handleEventlist);
+                // 在次执行下一个动画；
+                _this.addEventListener(targets);
+                // 如果动画结束，查看动画是否还需下一轮动画；
+                if (e.target == _this.lastTarget.el && _this.count > 1) {
+                    // 剩余动画次数；
+                    _this.count--;
+                    // 需要用事件队列setTimeout，不然动画不会执行；
+                    setTimeout(function () {
+                        //进行下一次动画；
+                        _this.exec();
+                    })
+                }
+            }
+            target.el.addEventListener('animationend', handleEventlist);
+        }
+    }
+
+    var ani = new Ani({
+        targets: [
+            {
+                el: document.querySelector('.box1'),
+                animationClassName: 'change'
+            },
+            {
+                el: document.querySelector('.box2'),
+                animationClassName: 'change'
+            },
+            {
+                el: document.querySelector('.box3'),
+                animationClassName: 'change'
+            },
+            {
+                el: document.querySelector('.box4'),
+                animationClassName: 'change'
+            }
+        ],
+        count: 4,
+        reverse: true
+    })
+
+    // 1. 顺序执行5个动画
+    // 当第一个动画执行结束后，执行下一个；
+    //如何添加动画？ 
+    //给dom添加class方法 'change'
+    // animationend方法中就能监听到当前动画是否结束；
+    var oBox1 = document.querySelector('.box1');
+    var oBox2 = document.querySelector('.box2');
+    var oBox3 = document.querySelector('.box3');
+    var oBox4 = document.querySelector('.box4');
+
+
+    // 同步异步的问题    事件、ajax xhr setTimeout setInterval 
+    // 高阶函数：一个普通函数，但是他的入参是一个方法，这种函数叫高阶函数；
+    // oBox1.classList.add('change');
+    // console.log(1);
+    // oBox1.addEventListener('animationend',function(){
+    //     console.log("动画1执行完毕")
+    // })
+    // console.log(2);
+
+    // oBox2.addEventListener('animationend',function(){
+    //     console.log("动画2执行完毕")
+    // })
+
+    // console.log(3);
+    //  1  2  3  动画1执行完毕  动画2执行完毕
+
+    // function addEventListener(eventName,callback){
+    //     setTimeout(function(){
+    //         callback();
+    //     },2000)
+    // }
+
+
+    // class A{
+    //     constructor(){
+    //         this.name = 'xiaoming';
+    //         this.exec();
+    //     }
+
+    //     run(){
+    //         console.log("run is ok;")
+    //     }
+
+    //     exec(){
+    //         console.log(this)  // a;
+    //         // 作用域  箭头函数  this;
+    //         let _this = this;
+    //         document.querySelector('.box1').addEventListener('animationend',function(){
+    //             //  this =>  boxDom元素；
+    //             console.log(_this.name);
+    //             _this.run();
+
+    //         })
+    //     }
+    // }
+
+    // var a = new A();
+    // return 就是一个方法的结果；会中断当前方法中的return后的所有代码；return后的代码将不会执行；
+    // 适用场景：逻辑判断不满足条件后，就不会执行之后的逻辑时，就可以真的加return;
+    // function a() {
+    //     console.log(1);
+    //     return;
+    //     console.log(2);
+    // }
+    // a()  // 1  
+    // console.log(3) // 3
+    //2.  方法的返回值可以是任何类型的数据； 
+    // return什么，这个方法的值就是什么， 
+    // 这个方法你们可理解成一个变量，这个变量的值就是return的值 ；
+    // function b(){
+    //     // return 'hello world';
+    //     // return ['xiaoming']
+    //     // return { name : 'xiaoming'};
+    //     return function(){ return};
+    // }
+
+    // let c = b() // 'hello world';
+    // let d = b() // ['xiaoming'];
+    // let e = b() // {name:'xiaoming'}
+    // let f = b()() // undefined;
+
+
+    // addEventListener
+    // document.querySelector('.box').onclick = function(){
+    // }
+    // addEventlistenner   removeEventlistenner
+
+
+
+
+
+
+
+
+
+
+
+    // function abc() {
+    //     addEventListener('animationend', function () {
+    //         console.log('2秒种已过，动画执行完毕')
+    //         return;
+    //     })
+    // }
+
+    // console.log(1);
+
+    // abc()
+
+    // console.log(2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var arr = [
+        {
+            el: document.querySelector('.box1'),
+            animationClassName: 'change'
+        },
+        {
+            el: document.querySelector('.box2'),
+            animationClassName: 'change'
+        },
+        {
+            el: document.querySelector('.box3'),
+            animationClassName: 'change'
+        },
+        {
+            el: document.querySelector('.box4'),
+            animationClassName: 'change'
+        }
+    ];
+
+    // 如何执行下一个动画
+    //  1. 取出数组中的第一个元素；
+    // 给数组中的第一个元素添加动画效果；
+    // 当动画结束后
+    //  判断当前数组长度是否为空，
+    // 如果不为空，则继续走第一步；
+    // 这是一个递归；
+    // function handleAnimation() {
+    //     if (!arr.length) return;
+    //     console.log(arr);
+    //     let target = arr.shift(); //删除数组中的第一个元素，并返回删除后的元素；
+    //     target.el.classList.add(target.animationClassName)
+    //     target.el.addEventListener('animationend', function (e) {
+    //         //动画执行完毕；
+    //         handleAnimation()
+    //     })
+    // }
+
+    // handleAnimation();
+
+
+
+
+</script>
+
+</html>

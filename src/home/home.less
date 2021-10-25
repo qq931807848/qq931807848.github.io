@@ -1,6 +1,29 @@
+<<<<<<< HEAD
 body,div,ul,li,p,span{
     margin: 0;
     padding: 0;
+=======
+body,h2,h3,h5{
+    margin:0;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+}
+.pl-20{
+    padding:20px;
+}
+.ml-20{
+    margin-left: 20px;
+}
+
+.left{
+    float:left;
+}
+
+:root{
+    --main_color:#06f;
+>>>>>>> c31f0a2a4c1e554c1331bc2fa84cf6a3e86f8cf0
 }
 #wrap{
     min-width: 1000px;
@@ -138,6 +161,7 @@ main{
     position: relative;
     left: -1200px;
 
+<<<<<<< HEAD
 }
 .content_firsttext,.content_secondtext,.content_thirdtext{
     font-size: 2vh;
@@ -204,3 +228,146 @@ main{
 
 
 
+=======
+body{
+    min-height:100vh;
+    background:#f6f6f6;
+}
+.header {
+    padding:10px;
+    border:1px solid #f2f2f2;
+    background:#fff;
+    & h2{
+        margin:0 auto;
+        text-indent: 2em;
+        max-width:1156px;
+        color:var(--main_color);
+    }
+}
+
+.container{
+    width:1000px;
+    margin:0 auto;
+    margin-top:10px;
+    display: flex;
+    & > section{
+        width:694px;
+        & > header{
+            padding:20px;
+            background:#fff;
+            border-radius: 2px;
+            line-height: 24px;
+            & .logo{
+                width:100px;
+                height:100px;
+                border-radius: 4px;
+                text-align:center;
+                line-height: 100px;
+                font-size:32px;
+                color:#fff;
+                background:var(--main_color);
+                float:left;
+                margin-right:20px;
+            }
+        }
+
+        & > section{
+            background:#fff;
+            margin-top: 10px;
+            border-radius: 2px;
+           .tabs {
+               display:flex;
+               position:relative;
+               padding:0 10px;
+               & .tab-item{
+                   padding:6px 10px;
+                   & .tab-name{
+                       padding:10px 0;
+                       cursor: pointer;
+                    }
+                    & > .main{
+                       background:#fff;
+                       position:absolute;
+                       left:0;
+                       & h3{
+                           line-height: 32px;
+                           padding-left: 20px;
+                       }
+                       & article{
+                           padding: 0 20px;
+                           line-height: 24px;
+                       }
+                       & .item{
+                           border-bottom: 1px solid #f6f6f6;
+                           padding:10px 0;
+                           width:694px;
+                       }
+                   }
+               }
+           }
+        }
+    }
+    & > aside{
+        background:#fff;
+        margin-left:10px;
+        width:296px;
+        padding:10px 0;
+        & h5{
+            text-indent: 10px;
+        }
+        & > .content{
+            button{
+                margin-left:10px;
+                margin-top: 10px;
+                padding:6px 11px;
+                background:rgba(63, 137, 248,.1);
+                border:none;
+                color:var(--main_color);
+                border-radius: 14px;
+               
+            }
+            button:hover{
+                animation: btn-active .4s alternate both;
+            }
+        }
+    }
+}
+
+@keyframes btn-active{
+    100%{
+        background:rgba(63, 137, 248,.3);
+    }
+}
+
+.active{
+    border-bottom:2px solid var(--main_color);
+}
+
+.nav{
+    display: flex;
+    margin-top: 10px;
+    & > button{
+        background:var(--main_color);
+        padding:6px 14px;
+        color:#fff;
+        border:none;
+        border-radius: 4px;
+        margin-right:10px;
+    }
+    img{
+        width:16px;
+        height:16px;
+    }
+    & nav{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        justify-content: center;
+        & span{
+            margin-left:3px;
+        }
+        color:#8a8a8a;
+    }
+    
+}
+>>>>>>> c31f0a2a4c1e554c1331bc2fa84cf6a3e86f8cf0
