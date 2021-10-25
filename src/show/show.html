@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>   本周学习了很多知识点在作业中也有很多收获：</h3>
+    <div class="list">
+        知识点：
+       1.正则表达式是用来匹配字符串的有自己的一些匹配规则 例如：\n匹配回车 \s匹配空格 \w匹配字母 数字    下划线 
+       2.Dom.reomve()虽然会让元素在页面消失 但不会把变量消除
+       3.重绘和回流 
+       重绘：元素的样式发生改变如颜色背景颜色 这种只改变自身样式，不会影响到其他元素
+       回流： 元素的带线啊哦或者位置发生改变
+       4.文档碎片 
+       文档碎片是为了减少重绘和回流以便提高性能；
+        语法：var fragment=document.creatDocumentFragment()
+       5.Promise 解决回调地狱
+       回调地狱 ： 异步执行套异步执行所形成的 
+       Promise 接受两个方法 resolve 和 reject 在成功时执行resolve的回调函数 在失败时执行reject的回调函数
+       async 和await 必须同时出现
+       （async function(){
+           let res = await 成功的方法
+       }）
+       5.导入分为同步导入和异步导入(按需导入)
+       异步导入=懒加载
+       最终形态
+       
+       var json={
+           url:async()=>await import(/*webpackChunkName:'text'*/'url')
+       }
+       在作业中收获到的：
+       1.在类的方法中要把一些只需要执行性一次的代码抽离出来不需要每次执行都要去操作 还要提高代码的语义化提高可读性
+       2.在只有非实即否并且有赋值操作的时候采用三元运算符 其他科用if else
+       3.方法要保证纯洁性在一个方法中只做他自己的一个功能 避免多功能在一个方法中 这是为了方法的解耦，提高方法的复用性
+       4.在数据中的id只是标识 一般用来和服务端进行交互
+       5.方法的传参中必填项要放在最前面，非必填项要靠后
+       6.链式调用 一个方法如果没有return 那么结果就是undefined 而undefined是无法调用方法的
+    </div>
+</body>
+</html>
