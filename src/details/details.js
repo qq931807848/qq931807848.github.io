@@ -61,7 +61,7 @@ var questions=document.querySelectorAll('.question')
 for(var i = 0; i <questions.length; i++){  
     questions[i].addEventListener('click',function(){
      console.log(this.dataset.id)
-     window.location.href=`http://localhost:8080/show.html?type=2&id=1&name=xiaoming`
+     window.location.href=`https://qq931807848.github.io/docs/show.html?type=2&id=1&name=xiaoming`
     })
 }
 //tab切换
