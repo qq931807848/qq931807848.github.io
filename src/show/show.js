@@ -10,7 +10,7 @@ import { doc } from "prettier"
 export default class Ellipsis {
     constructor(obj) {
         this.el = obj.el;
-        this.text = this.el.innerHTML
+        this.text = this.el.textContent
         this.textCount = obj.textCount;
         this.findAllButtonText = obj.findAllButtonText || '查看全部';
         this.ellipsisButtonText = obj.ellipsisButtonText || '收起';

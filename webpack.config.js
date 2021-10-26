@@ -12,7 +12,7 @@ const stylesHandler = isProduction
 
 const conf = getConfig({
 
-  modules:['index','home','animation','details','show']  //新增模块
+  modules:['index','home','animation','details','show','articleDetail']  //新增模块
 
 
 });
