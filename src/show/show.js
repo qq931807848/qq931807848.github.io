@@ -5,8 +5,6 @@
   * @param findAllButtonText: 非必填项,默认为'查看全部'
   * @param showFindAllButton :非必填项,是否显示'查看全部'按钮,默认为false
   * **/
-
-import { doc } from "prettier"
 export default class Ellipsis {
     constructor(obj) {
         this.el = obj.el;

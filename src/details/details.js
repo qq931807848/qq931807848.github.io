@@ -1,5 +1,4 @@
-import { doc } from 'prettier'
-import articles from '../articles'
+import articles from '../../articles'
 import Ellipsis from '../show/show'
 String.prototype.ellipsis = function (index) {
     if (this.length > index) {

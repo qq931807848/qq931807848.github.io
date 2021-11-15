@@ -1,8 +1,7 @@
 {
-  "name": "webpack-multpart-framework",
+  "name": "qq931807848.github.io",
   "version": "1.0.0",
   "description": "multpart entry webpack framework",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production --node-env=production",

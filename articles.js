@@ -1,8 +1,8 @@
-import article from './articles/article.html'
-import article2 from './articles/article2.html'
-import article3 from './articles/article3.html'
-import article4 from './articles/article4.html'
-import article5 from './articles/article5.html'
+import article from './src/articles/article.html'
+import article2 from './src/articles/article2.html'
+import article3 from './src/articles/article3.html'
+import article4 from './src/articles/article4.html'
+import article5 from './src/articles/article5.html'
 function parseHTML(text) {
     var oDiv = document.createElement('div')
     oDiv.innerHTML = text
