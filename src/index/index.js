@@ -1,8 +1,7 @@
 var btn = document.querySelector('.next')
 var wrap = document.getElementById('wrap')
 btn.onclick = function () {
-    wrap.setAttribute('class', 'box');
-    window.location.href='https://qq931807848.github.io/docs/details.html';
+    window.location.href='https://qq931807848.github.io/docs/home.html';
 }
 var img = document.querySelector('.header_img');
 var h4 = document.querySelector('.h4')
