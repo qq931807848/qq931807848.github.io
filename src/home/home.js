@@ -1,5 +1,7 @@
 import articles from '../../articles'
 import Ellipsis from '../details/details'
+import Translate from '../../assets/js/Translate'
+import Ani from '../../assets/js/Ani'
 String.prototype.ellipsis = function (index) {
     if (this.length > index) {
         var newstr = this.substring(0, index) + '...'
@@ -86,4 +88,35 @@ for(var i = 0;i<spans.length; i++){
         this.parentNode.parentNode.parentNode.children[1].innerHTML='aa';
     })
 }
-
+let list = document.querySelectorAll('.list-item');
+list.forEach((item,index)=>{
+    item.classList.add(`n${num}`)
+    num++
+   console.log(item.className) 
+})
+let ani = new Ani(new Translate({
+    targets: [
+        {
+            el: document.querySelector('.n5'),
+            animationClassName: 'change'
+        },
+        {
+            el: document.querySelector('.n6'),
+            animationClassName: 'change'
+        },
+        {
+            el: document.querySelector('.n7'),
+            animationClassName: 'change'
+        },
+        {
+            el: document.querySelector('.n8'),
+            animationClassName: 'change'
+        },
+        {
+            el: document.querySelector('.n9'),
+            animationClassName: 'change'
+        },
+    ],
+    count: 1,
+    reverse: [2]
+}))
